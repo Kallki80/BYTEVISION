@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block content %}
+<section id="contact-info">
+    <h2>Get In Touch</h2>
+    <div class="contact-info-box">
+        <div class="contact-card">
+            <a href="#map-box" class="contact-link" style="text-decoration:none; color:inherit;">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Address</h3>
+                <p>Baghola, Palwal, Haryana, (India)<br>Pin: 121102</p>
+            </a>
+        </div>
+        <div class="contact-card">
+            <a href="tel:+918053255812" class="contact-link" style="text-decoration:none; color:inherit;">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>
+                <p>+91 8053255812<br></p>
+            </a>
+        </div>
+        <div class="contact-card">
+                <a href="mailto:kallkicode@gmail.com" class="contact-link" style="text-decoration:none; color:inherit;">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>kallkicode@gmail.com</p>
+                </a>
+            </div>
+        
+            <div class="contact-card">
+                <a href="https://wa.me/918053255812" class="contact-link" target="_blank" style="text-decoration:none; color:inherit;">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>Chat with us on WhatsApp</p>
+                </a>
+            </div>
+
+        <div class="contact-card">
+            <i class="fas fa-clock"></i>
+            <h3>Office Hours</h3>
+            <p>Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 4:00 PM<br>Sun: Closed</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact-map">
+    <h2>Find Us</h2>
+    <div class="map-box" id="map-box">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3515.9346493682174!2d77.30215898093833!3d28.209298013754424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cd100703c308b%3A0x8dfad35e9f3230c!2sNitish%20Home!5e0!3m2!1sen!2sin!4v1769247036303!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+<section id="contact-form-section">
+    <h2>Send Us a Message</h2>
+    <p style="text-align:center; max-width:700px; margin:0 auto 2rem auto;">Have a project in mind? Reach out to us and we'll provide a tailored solution according to your needs.</p>
+    <form class="contact-form" method="POST" action="{{ url_for('send_message') }}">
+        <div class="form-row">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+        <div class="form-row">
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="text" name="subject" placeholder="Project Type / Subject" required>
+        </div>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+</section>
+{% endblock %}

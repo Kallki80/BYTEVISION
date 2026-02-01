@@ -1,0 +1,150 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>We Deliver Tailored Digital Solutions for Your Business</h1>
+        <p>From simple static websites to advanced interactive platforms, we provide end-to-end web solutions designed to grow your business. Our projects are affordable, modern, and delivered on time.</p>
+        <a href="{{ url_for('contact') }}">Request a Quote</a>
+    </div>
+    <div class="hero-model">
+        <model-viewer
+            src="{{ url_for('static', filename='assets/sophia.glb') }}"
+            camera-controls
+            animation-name="Idle"
+            autoplay
+            disable-zoom
+            touch-action="pan-y"
+            camera-orbit="0deg 90deg 25m"
+            shadow-intensity="1"
+            style="width:100%; height:100%;">
+        </model-viewer>
+    </div>
+</section>
+
+<!-- ABOUT INTRO -->
+<section id="intro">
+    <h2>Who We Are</h2>
+    <div class="who_we_are">
+        <p>ByteVision Solutions is a leading web and software development company that transforms ideas into reality. Our team specializes in creating websites, web apps, and e-commerce solutions that are visually appealing, fast, and user-friendly.</p>
+        <p>We focus on client satisfaction, timely delivery, and providing scalable solutions. Our mission is to empower businesses of all sizes with technology that drives results.</p>
+    </div>
+</section>
+
+<!-- SERVICES SUMMARY -->
+<section id="services-summary">
+    <h2>What We Offer</h2>
+    <div class="services-container">
+        <div class="service-card">
+            <i class="fas fa-globe service-icon"></i>
+            <h3>Static Website</h3>
+            <p>Perfect for small businesses or personal portfolios. Starting at ₹15,000. Clean design, fast loading, and SEO friendly.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-cogs service-icon"></i>
+            <h3>Advanced Website</h3>
+            <p>Dynamic websites with CMS integration, interactive features, and responsive design. Starting at ₹20,000. Hosting and domain included for 1 year.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-shopping-cart service-icon"></i>
+            <h3>E-commerce Website</h3>
+            <p>Fully functional online stores with product management, payment gateway integration, and analytics dashboard. Starting at ₹25,000. Hosting and domain included for 1 year.</p>
+        </div>
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why-choose">
+    <h2>Why Choose ByteVision Solutions?</h2>
+    <div class="why-choose">
+        <p>We believe in quality, transparency, and client satisfaction. Every project is handled by experienced professionals who ensure that the final product exceeds expectations. Here’s why clients love working with us:</p>
+        <ul class="why-chooselist" style="max-width:800px; margin:1rem auto 2rem auto; font-size:1rem; line-height:1.5;">
+            <li><i class="fas fa-check-circle"></i> Customized solutions tailored to your business needs.</li>
+            <li><i class="fas fa-check-circle"></i> Affordable pricing with clear breakdowns.</li>
+            <li><i class="fas fa-check-circle"></i> Timely delivery with professional project management.</li>
+            <li><i class="fas fa-check-circle"></i> Ongoing support and maintenance after project delivery.</li>
+            <li><i class="fas fa-check-circle"></i> Modern, mobile-friendly, and SEO optimized designs.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+    <h2>Our Process</h2>
+    <div class="process-box">
+        <div class="process-content">
+            <div class="process-text">
+                <p style="max-width:800px; margin:0 auto 2rem auto;">We follow a structured approach to ensure project success:</p>
+                <ol style="max-width:800px; margin:0 auto; line-height:1.6; font-size:1rem;">
+                    <li><i class="fas fa-search"></i> <strong>Requirement Analysis:</strong> We understand your business goals and gather requirements.</li>
+                    <li><i class="fas fa-pencil-ruler"></i> <strong>Planning & Design:</strong> Wireframes and design prototypes are shared for feedback.</li>
+                    <li><i class="fas fa-code"></i> <strong>Development:</strong> Our developers build the website or application following best practices.</li>
+                    <li><i class="fas fa-bug"></i> <strong>Testing & QA:</strong> Thorough testing is done to ensure a bug-free product.</li>
+                    <li><i class="fas fa-rocket"></i> <strong>Deployment:</strong> The final project is deployed with hosting, domain setup, and launch support.</li>
+                    <li><i class="fas fa-headset"></i> <strong>Support:</strong> Ongoing support and updates as needed.</li>
+                </ol>
+            </div>
+            <div class="process-image">
+                <img src="{{ url_for('static', filename='assets/Article-Thumbnails-7-600x400.png') }}" alt="Our Process Illustration">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+    <h2>Client Testimonials</h2>
+    <div class="projects-container">
+        <div class="project-card">
+            <div class="content">
+                <img src="{{ url_for('static', filename='assets/vu-thi-ha-user-pro-icon-115534024853ae3gswzwd.png') }}" alt="Rajesh Kumar" class="avatar">
+                <p><i class="fas fa-quote-left"></i> "ByteVision Solutions delivered our website on time and beyond our expectations. Their team was professional and responsive throughout the project."</p>
+                <h3>- Rajesh Kumar, Business Owner</h3>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="content">
+                <img src="{{ url_for('static', filename='assets/vu-thi-ha-user-pro-icon-115534024853ae3gswzwd.png') }}" alt="Sneha Mehta" class="avatar">
+                <p><i class="fas fa-quote-left"></i> "Amazing service! They created a dynamic web app for our company which improved our customer engagement significantly."</p>
+                <h3>- Sneha Mehta, Marketing Head</h3>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="content">
+                <img src="{{ url_for('static', filename='assets/vu-thi-ha-user-pro-icon-115534024853ae3gswzwd.png') }}" alt="Amit Verma" class="avatar">
+                <p><i class="fas fa-quote-left"></i> "Professional team, timely delivery, and excellent communication. Highly recommended for small to medium businesses."</p>
+                <h3>- Amit Verma, Entrepreneur</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+    <h2>Our Impact in Numbers</h2>
+    <div class="stats-container">
+        <div class="stat-item">
+            <i class="fas fa-project-diagram"></i>
+            <h3>150+</h3>
+            <p>Projects Delivered</p>
+        </div>
+        <div class="stat-item">
+            <i class="fas fa-users"></i>
+            <h3>100+</h3>
+            <p>Happy Clients</p>
+        </div>
+        <div class="stat-item">
+            <i class="fas fa-clock"></i>
+            <h3>5 Years</h3>
+            <p>Experience</p>
+        </div>
+        <div class="stat-item">
+            <i class="fas fa-globe"></i>
+            <h3>24/7</h3>
+            <p>Support</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+        {% block content %}
+<section id="our-services">
+    <h2>Our Services</h2>
+    <div class="services-box">
+        <div class="services-container">
+            <div class="service-card">
+                <i class="fas fa-globe service-icon"></i>
+                <h3>Static Website</h3>
+                <p>Professional, responsive websites starting from ₹15,000. Perfect for small businesses and personal portfolios.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Fully responsive design</li>
+                    <li><i class="fas fa-check"></i> SEO optimized</li>
+                    <li><i class="fas fa-check"></i> Fast loading speeds</li>
+                    <li><i class="fas fa-check"></i> Contact forms included</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-cogs service-icon"></i>
+                <h3>Advanced Website</h3>
+                <p>Dynamic websites with interactive features, CMS integration, starting from ₹20,000. Hosting and domain included for 1 year.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Content Management System</li>
+                    <li><i class="fas fa-check"></i> Interactive elements</li>
+                    <li><i class="fas fa-check"></i> Admin dashboard</li>
+                    <li><i class="fas fa-check"></i> 1-year hosting & domain</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-shopping-cart service-icon"></i>
+                <h3>E-commerce Website</h3>
+                <p>Online stores with payment gateway, product management, starting from ₹25,000. Includes 1-year hosting & domain.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Secure payment integration</li>
+                    <li><i class="fas fa-check"></i> Product catalog management</li>
+                    <li><i class="fas fa-check"></i> Order tracking system</li>
+                    <li><i class="fas fa-check"></i> Analytics dashboard</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="pricing">
+    <h2>Pricing Plans</h2>
+    <div class="pricing-box">
+        <div class="pricing-card">
+            <h3>Basic</h3>
+            <div class="price">₹15,000</div>
+            <ul>
+                <li>5 Pages</li>
+                <li>Responsive Design</li>
+                <li>Basic SEO</li>
+                <li>Contact Form</li>
+                <li>1 Month Support</li>
+            </ul>
+            <a href="{{ url_for('contact') }}" class="pricing-btn">Get Started</a>
+        </div>
+        <div class="pricing-card popular">
+            <h3>Standard</h3>
+            <div class="price">₹20,000</div>
+            <ul>
+                <li>10 Pages</li>
+                <li>CMS Integration</li>
+                <li>Advanced SEO</li>
+                <li>Interactive Features</li>
+                <li>3 Months Support</li>
+            </ul>
+            <a href="{{ url_for('contact') }}" class="pricing-btn">Get Started</a>
+        </div>
+        <div class="pricing-card">
+            <h3>Premium</h3>
+            <div class="price">₹25,000</div>
+            <ul>
+                <li>Unlimited Pages</li>
+                <li>E-commerce Ready</li>
+                <li>Full SEO Package</li>
+                <li>Payment Gateway</li>
+                <li>6 Months Support</li>
+            </ul>
+            <a href="{{ url_for('contact') }}" class="pricing-btn">Get Started</a>
+        </div>
+    </div>
+</section>
+
+<section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-box">
+        <div class="faq-item">
+            <h3><i class="fas fa-question-circle"></i> How long does it take to build a website?</h3>
+            <p>Typically 2-4 weeks for a standard website, depending on complexity and client feedback.</p>
+        </div>
+        <div class="faq-item">
+            <h3><i class="fas fa-question-circle"></i> Do you provide hosting and domain?</h3>
+            <p>Yes, we include 1-year hosting and domain registration for advanced and e-commerce packages.</p>
+        </div>
+        <div class="faq-item">
+            <h3><i class="fas fa-question-circle"></i> Can I update the website myself?</h3>
+            <p>Absolutely! We provide training and easy-to-use CMS for content updates.</p>
+        </div>
+        <div class="faq-item">
+            <h3><i class="fas fa-question-circle"></i> What about mobile responsiveness?</h3>
+            <p>All our websites are fully responsive and optimized for all devices.</p>
+        </div>
+        <div class="faq-item">
+            <h3><i class="fas fa-question-circle"></i> Do you offer maintenance services?</h3>
+            <p>Yes, we provide ongoing support and maintenance packages to keep your site updated and secure.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

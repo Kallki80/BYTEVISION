@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+{% block content %}
+<section id="our-projects">
+    <h2>Our Projects</h2>
+    <div class="projects-box">
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="{{ url_for('static', filename='assets/Business.png') }}" alt="Project 1">
+                <div class="content">
+                    <h3><i class="fas fa-briefcase"></i> Business Portfolio Website</h3>
+                    <p>Modern static website for a corporate client, fully responsive and SEO optimized. Technologies: HTML, CSS, JavaScript.</p>
+                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="{{ url_for('static', filename='assets/E-commerce.png') }}" alt="Project 2">
+                <div class="content">
+                    <h3><i class="fas fa-shopping-bag"></i> E-commerce Platform</h3>
+                    <p>Full-fledged online store with integrated payment system, product management, and analytics. Built with React and Node.js.</p>
+                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="{{ url_for('static', filename='assets/Web-Application.png') }}" alt="Project 3">
+                <div class="content">
+                    <h3><i class="fas fa-code"></i> Interactive Web Application</h3>
+                    <p>Custom dynamic web application with admin dashboard and advanced features. Stack: MERN, Firebase.</p>
+                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="{{ url_for('static', filename='assets/mobile-ui.png') }}" alt="Project 4">
+                <div class="content">
+                    <h3><i class="fas fa-mobile-alt"></i> Mobile App UI/UX</h3>
+                    <p>Designed user interface for a mobile application, focusing on user experience and modern design principles.</p>
+                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="{{ url_for('static', filename='assets/Data-Dashboard.png') }}" alt="Project 5">
+                <div class="content">
+                    <h3><i class="fas fa-chart-line"></i> Data Dashboard</h3>
+                    <p>Interactive dashboard for data visualization, built with D3.js and integrated with real-time data sources.</p>
+                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="{{ url_for('static', filename='assets/restorent.png') }}" alt="Project 6">
+                <div class="content">
+                    <h3><i class="fas fa-utensils"></i> Restaurant Website</h3>
+                    <p>Beautiful website for a local restaurant with online ordering system and menu showcase.</p>
+                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="{{ url_for('static', filename='assets/Educational.png') }}" alt="Project 7">
+                <div class="content">
+                    <h3><i class="fas fa-graduation-cap"></i> Educational Platform</h3>
+                    <p>Online learning platform with course management, video streaming, and student progress tracking.</p>
+                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="{{ url_for('static', filename='assets/Healthcare.png') }}" alt="Project 8">
+                <div class="content">
+                    <h3><i class="fas fa-heartbeat"></i> Healthcare Portal</h3>
+                    <p>Secure patient portal for a medical clinic with appointment booking and health record management.</p>
+                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="project-stats">
+    <h2>Project Statistics</h2>
+    <div class="stats-box">
+        <div class="stat-card">
+            <i class="fas fa-project-diagram"></i>
+            <h3>150+</h3>
+            <p>Projects Completed</p>
+        </div>
+        <div class="stat-card">
+            <i class="fas fa-users"></i>
+            <h3>100+</h3>
+            <p>Happy Clients</p>
+        </div>
+        <div class="stat-card">
+            <i class="fas fa-clock"></i>
+            <h3>98%</h3>
+            <p>On-Time Delivery</p>
+        </div>
+        <div class="stat-card">
+            <i class="fas fa-star"></i>
+            <h3>4.9/5</h3>
+            <p>Average Rating</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

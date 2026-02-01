@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<section id="model-intro">
+    <h2>Exploring 3D Models in Web Development</h2>
+    <div class="model-intro-box">
+        <div class="model-text">
+            <h1>Cutting-Edge 3D Integration</h1>
+            <p><i class="fas fa-cube"></i> 3D models bring websites to life by adding immersive, interactive elements that engage users like never before. At ByteVision Solutions, we integrate cutting-edge 3D technology to create memorable digital experiences.</p>
+            <p><i class="fas fa-vr-cardboard"></i> Our 3D models are optimized for web performance, ensuring fast loading times while providing stunning visuals. Rotate, zoom, and interact with our demo model below to see the possibilities.</p>
+        </div>
+        <div class="model-image">
+            <img src="{{ url_for('static', filename='assets/pngtree-robot-cute-technology-3d-png-image_9125332.png') }}" alt="3D Technology">
+        </div>
+    </div>
+</section>
+
+<section id="model-demo">
+    <h2>Interactive 3D Model Demo</h2>
+    <div style="display:flex; justify-content:center;">
+        <model-viewer
+            src="{{ url_for('static', filename='assets/sophia.glb') }}"
+            camera-controls
+            animation-name="Idle"
+            autoplay
+            disable-zoom
+            touch-action="pan-y"
+            camera-orbit="0deg 90deg 25m"
+            shadow-intensity="1"
+            style="width:70%; height:70vh;">
+        </model-viewer>
+    </div>
+    <h2 style="color: #4e89ff;">SHASHEE</h2>
+    <p style="text-align:center; max-width:700px; margin:2rem auto;">
+        SHASHEE is a 3D model represents our commitment to modern interactive solutions. You can rotate and view the model in 3D to get a sense of our technological approach. Try dragging to rotate or using mouse wheel to zoom (if enabled).
+    </p>
+</section>
+
+<section id="model-benefits">
+    <h2>Benefits of 3D Models</h2>
+    <div class="benefits-box">
+        <div class="benefit-card">
+            <i class="fas fa-eye"></i>
+            <h3>Enhanced Engagement</h3>
+            <p>3D models capture user attention and create memorable experiences that static images can't match.</p>
+        </div>
+        <div class="benefit-card">
+            <i class="fas fa-tachometer-alt"></i>
+            <h3>Improved Performance</h3>
+            <p>Modern web technologies allow 3D models to load quickly and run smoothly across devices.</p>
+        </div>
+        <div class="benefit-card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Mobile Friendly</h3>
+            <p>Touch controls and responsive design ensure great experiences on all screen sizes.</p>
+        </div>
+        <div class="benefit-card">
+            <i class="fas fa-cogs"></i>
+            <h3>Future-Proof</h3>
+            <p>3D technology is evolving rapidly, keeping your website ahead of the curve.</p>
+        </div>
+    </div>
+</section>
+
+<section id="model-applications">
+    <h2>Applications of 3D Models</h2>
+    <div class="applications-box">
+        <div class="app-card">
+            <i class="fas fa-building"></i>
+            <h3>Architecture</h3>
+            <p>Virtual tours of buildings and spaces before construction.</p>
+        </div>
+        <div class="app-card">
+            <i class="fas fa-shopping-cart"></i>
+            <h3>E-commerce</h3>
+            <p>Interactive product views for better online shopping experiences.</p>
+        </div>
+        <div class="app-card">
+            <i class="fas fa-gamepad"></i>
+            <h3>Gaming</h3>
+            <p>Immersive game previews and interactive demos.</p>
+        </div>
+        <div class="app-card">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Education</h3>
+            <p>Interactive learning tools and anatomical models.</p>
+        </div>
+        <div class="app-card">
+            <i class="fas fa-industry"></i>
+            <h3>Manufacturing</h3>
+            <p>Product visualization and assembly instructions.</p>
+        </div>
+        <div class="app-card">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Healthcare</h3>
+            <p>Medical device visualization and patient education.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
