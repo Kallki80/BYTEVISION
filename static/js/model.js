@@ -35,14 +35,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (hamburger) {
         console.log('Hamburger found');
-        hamburger.addEventListener('click', () => {
-            console.log('Hamburger clicked');
+        
+        function toggleMenu(e) {
+            if (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            console.log('Menu toggled');
             navUl.classList.toggle('show');
-        });
-        hamburger.addEventListener('touchstart', () => {
-            console.log('Hamburger touched');
-            navUl.classList.toggle('show');
-        });
+        }
+        
+        // Use touchend instead of touchstart for better mobile support
+        // This prevents double-toggling that happens with both touchstart and click
+        hamburger.addEventListener('touchend', toggleMenu);
+        hamburger.addEventListener('click', toggleMenu);
     } else {
         console.log('Hamburger not found');
     }
@@ -105,11 +111,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 entry.target.classList.add('visible');
             }
         });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
     animateElements.forEach(section => {
         section.classList.add('animate'); // initially hidden
         observer.observe(section);
+        
+        // Fallback: Make visible after a short delay if IntersectionObserver doesn't trigger
+        setTimeout(() => {
+            if (section.classList.contains('animate') && !section.classList.contains('visible')) {
+                section.classList.add('visible');
+            }
+        }, 500);
     });
 
     // FAQ Accordion

@@ -7,12 +7,17 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/logo.png') }}">
 </head>
 <body>
 
 <!-- NAVBAR -->
 <nav>
-    <div class="logo">ByteVision Solutions</div>
+    
+    <div class="logo">
+        <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="ByteVision Logo" class="nav-logo">
+        <p>ByteVision Solutions</p>
+    </div>
     <div class="hamburger">
         <span></span>
         <span></span>
