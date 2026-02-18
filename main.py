@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, send_from_directory
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -35,6 +35,10 @@ def model():
 @app.route('/contact')
 def contact():
     return render_template('contact.html', active_page='contact')
+
+@app.route('/google8f30c4a7864fe662.html')
+def google_verify():
+    return send_from_directory('static', 'google8f30c4a7864fe662.html')
 
 
 @app.route('/send_message', methods=['POST'])
